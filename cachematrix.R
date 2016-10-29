@@ -34,7 +34,8 @@ cacheSolve <- function(x, ...) {
         }
         else
         {
-          inv_mat = solve(MATRIX)
+          m <- x$get()
+          inv_mat = solve(m)
           x$set_inv(inv_mat)
           inv_mat
         }
